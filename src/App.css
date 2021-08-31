@@ -1,38 +1,85 @@
+#root {
+  padding-top: 30px;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  background-color: #e0e5ec;
+  width: 45%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 30px;
+  border-radius: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.PostsPage {
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Post {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  list-style: none;
+  border: 1px solid #d9dce0;
+  background-color: white;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.CreatePostBlock {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #d9dce0;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.createPostButton {
+  text-decoration: none;
+  background-color: #4469ae;
+  border-radius: 3px;
   color: white;
+  padding: 3px 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.UserInfoBlock {
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.UserImage {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.PostInfoBlock {
+  margin-left: 20px;
+}
+
+.UserName {
+  color: #4469ae;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.created {
+  color: #6b7378;
+  font-weight: lighter;
+  margin-top: 10px;
+}
+
+.TextPost {
+  color: #2a262d;
+  font-size: 1.6rem;
+}
+
+.TextPostBlock {
+  text-decoration: none;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

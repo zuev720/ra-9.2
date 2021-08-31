@@ -1,0 +1,35 @@
+.PostCreatePage {
+    position: relative;
+    width: 100%;
+    text-align: right;
+}
+
+.CreatePostTextArea {
+    width: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+    padding: 20px;
+    color: #6b7378;
+    font-size: 1rem;
+}
+
+.CreatePostButton {
+    margin-top: 15px;
+    text-decoration: none;
+    background-color: #4469ae;
+    border-radius: 3px;
+    color: white;
+    padding: 3px 8px;
+    border: none;
+}
+
+.LeaveCreatePageButton {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #e0e5ec;
+}

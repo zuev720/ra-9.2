@@ -1,0 +1,33 @@
+.PostPage {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.PostButtonsBlock {
+    display: flex;
+    justify-content: flex-end;
+    border: 1px solid #dcdee1;
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.PostChange {
+    text-decoration: none;
+    background-color: #4469ae;
+    border-radius: 3px;
+    color: white;
+    font-size: 0.8rem;
+    margin-right: 15px;
+    padding: 3px 8px;
+}
+
+.PostDelete {
+    border: none;
+    background-color: #b04546;
+    border-radius: 3px;
+    color: white;
+    font-size: 0.8rem;
+    padding: 3px 8px;
+    cursor: pointer;
+}

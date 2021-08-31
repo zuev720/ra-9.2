@@ -1,0 +1,38 @@
+.EditPostPage {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.HeaderBlock {
+    align-self: flex-start;
+}
+
+.EditTextArea {
+    width: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+    padding: 20px;
+    margin-top: 20px;
+    color: #6b7378;
+    font-size: 1rem;
+}
+
+.PostChangeButton {
+    margin-top: 15px;
+    text-decoration: none;
+    background-color: #4469ae;
+    border-radius: 3px;
+    color: white;
+    padding: 3px 8px;
+    border: none;
+}
+
+.LeaveEditPageButton {
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #e0e5ec;
+}
