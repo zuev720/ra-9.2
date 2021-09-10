@@ -12,14 +12,14 @@ import {ErrorPage} from './Components/ErrorPage/ErrorPage';
 
 function App() {
     return (
-        <Router>
+        <Router basename={'/'}>
             <div className={'App'}>
                 <Switch>
                     <Route path={'/posts/edit/:id'} component={EditPostPage}/>
                     <Route path={'/posts/new'} component={PostCreatePage}/>
                     <Route path={'/posts/:id'} component={(props) => <PostPage {...props}/>}/>
                     <Route path={'/error'} component={ErrorPage}/>
-                    <Route exact path={'/'} component={MainPage}/>
+                    <Route exact component={MainPage}/>
                 </Switch>
             </div>
         </Router>
