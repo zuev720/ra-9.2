@@ -4,10 +4,11 @@ import {Button} from '../Button/Button';
 import './PostCreatePage.css';
 import {TextArea} from '../TextArea/TextArea';
 
-export function PostCreatePage(props) {
+export function PostCreatePage() {
     const history = useHistory();
     const [state, setState] = useState('');
     const handleTextArea = (e) => setState(e.target.value);
+
     const handleCreatePostButton = async () => {
         if (state.trim() === '') return null;
         const obj = {id: 0, content: state.trim()};

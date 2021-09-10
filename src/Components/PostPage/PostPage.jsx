@@ -1,16 +1,15 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import {Link, useHistory} from 'react-router-dom';
 import './PostPage.css';
-import {PostsContext} from '../PostsContext';
 import moment from 'moment';
 
 export function PostPage(props) {
     const history = useHistory();
-    const id = props.match.params.id;
-    const [loading, data, error] = useContext(PostsContext);
-    const post = data.find((elem) => elem.id === Number(id));
+    const post = props.location.propsSearch;
+    if (!post) history.push(`/error`);
+
     const handlePostDeleteButton = async () => {
-        await fetch(process.env.REACT_APP_PUBLIC_URL+'/'+id, {method: 'DELETE'}).then((result) => {
+        await fetch(process.env.REACT_APP_PUBLIC_URL + post.id, {method: 'DELETE'}).then((result) => {
             if (result.status === 204) {
                 history.push(`/`);
             } else {
@@ -24,8 +23,6 @@ export function PostPage(props) {
 
     return(
         <div className={'PostPage'}>
-            {error && history.replace(`/error`)}
-            {loading && <p>...Loading</p>}
             <div className={'UserInfoBlock'}>
                 <img className={'UserImage'} src={post.img} alt={'user'}/>
                 <div className={'PostInfoBlock'}>
@@ -37,7 +34,10 @@ export function PostPage(props) {
                 <p className={'TextPost'}>{post.content}</p>
             </div>
             <div className={'PostButtonsBlock'}>
-                <Link to={`/posts/edit/${id}`} className={'PostChange'}>Изменить</Link>
+                <Link to={{
+                    pathname: `/posts/edit/${post.id}`,
+                    propsSearch: post
+                }} className={'PostChange'}>Изменить</Link>
                 <button type={'button'} className={'PostDelete'} onClick={handlePostDeleteButton}>Удалить</button>
             </div>
         </div>
