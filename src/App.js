@@ -15,10 +15,10 @@ function App() {
         <Router basename={'https://zuev720.github.io/ra-9.2'}>
             <div className={'App'}>
                 <Switch>
-                    <Route path={'/ra-9.2/posts/edit/:id'} component={EditPostPage}/>
-                    <Route path={'/ra-9.2/posts/new'} component={PostCreatePage}/>
-                    <Route path={'/ra-9.2/posts/:id'} component={(props) => <PostPage {...props}/>}/>
-                    <Route path={'/ra-9.2/error'} component={ErrorPage}/>
+                    <Route path={'/posts/edit/:id'} component={EditPostPage}/>
+                    <Route path={'/posts/new'} component={PostCreatePage}/>
+                    <Route path={'/posts/:id'} component={(props) => <PostPage {...props}/>}/>
+                    <Route path={'/error'} component={ErrorPage}/>
                     <Route exact path={'/ra-9.2'} component={MainPage}/>
                 </Switch>
             </div>
