@@ -12,7 +12,7 @@ import {ErrorPage} from './Components/ErrorPage/ErrorPage';
 
 function App() {
     return (
-        <Router basename={'/ra-9.2/'}>
+        <Router basename={'/ra-9.2'}>
             <div className={'App'}>
                 <Switch>
                     <Route path={'/posts/edit/:id'} component={EditPostPage}/>
