@@ -1,7 +1,7 @@
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
+    Route, Redirect,
 } from "react-router-dom";
 import {MainPage} from './Components/MainPage/MainPage';
 import './App.css';
@@ -20,6 +20,7 @@ function App() {
                     <Route path={'/posts/:id'} component={(props) => <PostPage {...props}/>}/>
                     <Route path={'/error'} component={ErrorPage}/>
                     <Route exact path={'/ra-9.2'} component={MainPage}/>
+                    <Redirect to={'/ra-9.1'} />
                 </Switch>
             </div>
         </Router>
