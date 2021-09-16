@@ -12,14 +12,14 @@ import {ErrorPage} from './Components/ErrorPage/ErrorPage';
 
 function App() {
     return (
-        <Router basename={'https://zuev720.github.io/ra-9.2/'}>
+        <Router basename={'/ra-9.2/'}>
             <div className={'App'}>
                 <Switch>
-                    <Route path={'posts/edit/:id'} component={EditPostPage}/>
-                    <Route path={'posts/new'} component={PostCreatePage}/>
-                    <Route path={'posts/:id'} component={(props) => <PostPage {...props}/>}/>
-                    <Route path={'error'} component={ErrorPage}/>
-                    <Route exact path={'ra-9.2'} component={MainPage}/>
+                    <Route path={'/posts/edit/:id'} component={EditPostPage}/>
+                    <Route path={'/posts/new'} component={PostCreatePage}/>
+                    <Route path={'/posts/:id'} component={(props) => <PostPage {...props}/>}/>
+                    <Route path={'/error'} component={ErrorPage}/>
+                    <Route exact path={'/ra-9.2'} component={MainPage}/>
                 </Switch>
             </div>
         </Router>
